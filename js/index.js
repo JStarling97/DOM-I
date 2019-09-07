@@ -14,29 +14,91 @@ const siteContent = {
     "img-src": "img/header-img.png"
   },
   "main-content": {
-    "features-h4":"Features",
+    "features-h4": "Features",
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "about-h4":"About",
+    "about-h4": "About",
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "middle-img-src": "img/mid-page-accent.jpg",
-    "services-h4":"Services",
+    "services-h4": "Services",
     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "product-h4":"Product",
+    "product-h4": "Product",
     "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "vision-h4":"Vision",
+    "vision-h4": "Vision",
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
   "contact": {
-    "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
-    "phone" : "1 (888) 888-8888",
-    "email" : "sales@greatidea.io",
+    "contact-h4": "Contact",
+    "address": "123 Way 456 Street Somewhere, USA",
+    "phone": "1 (888) 888-8888",
+    "email": "sales@greatidea.io",
   },
   "footer": {
-    "copyright" : "Copyright Great Idea! 2018"
+    "copyright": "Copyright Great Idea! 2018"
   },
 };
 
+
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+const br = document.createElement("br");
+const logo = document.getElementById("logo-img");
+const ctaImage = document.getElementById('cta-img');
+const midImage = document.getElementById('middle-img');
+const navBar = document.querySelectorAll('a');
+const getStarted = document.querySelector('button');
+const mainText = document.querySelector('h1');
+const contentTitle = document.querySelectorAll('.top-content h4');
+const paraContent = document.querySelectorAll('.text-content p');
+const bottomTitle = document.querySelectorAll('.bottom-content h4');
+const cwText = document.querySelector('footer p');
+
+const contactTitle = document.querySelector('.contact h4');
+const contactInfo = document.querySelectorAll('.contact p');
+
+
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+ctaImage.setAttribute('src', siteContent['cta']['img-src']);
+
+midImage.setAttribute('src', siteContent['main-content']["middle-img-src"]);
+
+navBar[0].textContent = siteContent['nav']['nav-item-1'];
+navBar[1].textContent = siteContent['nav']['nav-item-2'];
+navBar[2].textContent = siteContent['nav']['nav-item-3'];
+navBar[3].textContent = siteContent['nav']['nav-item-4'];
+navBar[4].textContent = siteContent['nav']['nav-item-5'];
+navBar[5].textContent = siteContent['nav']['nav-item-6'];
+
+
+getStarted.textContent = "Get Started!";
+
+mainText.textContent = siteContent["cta"]["h1"];
+
+contentTitle[0].textContent = siteContent['main-content']['features-h4'];
+contentTitle[1].textContent = siteContent['main-content']['about-h4'];
+bottomTitle[0].textContent = siteContent['main-content']['services-h4'];
+bottomTitle[1].textContent = siteContent['main-content']['product-h4'];
+bottomTitle[2].textContent = siteContent['main-content']['vision-h4'];
+
+paraContent[0].textContent = siteContent['main-content']['features-content'];
+paraContent[1].textContent = siteContent['main-content']['about-content'];
+paraContent[2].textContent = siteContent['main-content']['services-content'];
+paraContent[3].textContent = siteContent['main-content']['product-content'];
+paraContent[4].textContent = siteContent['main-content']['vision-content'];
+
+
+
+
+
+
+
+
+
+
+
+contactTitle.textContent = siteContent['contact']['contact-h4'];
+contactInfo[0].textContent = siteContent['contact']['address'];
+contactInfo[1].textContent = siteContent['contact']['phone'];
+contactInfo[2].textContent = siteContent['contact']['email'];
+
+
+cwText.textContent = siteContent['footer']['copyright'];
