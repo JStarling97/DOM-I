@@ -37,9 +37,53 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let ctaImage = document.getElementById('cta-img');
+// Example: Update the img src for the logo
+const br = document.createElement("br");
+const logo = document.getElementById("logo-img");
+const ctaImage = document.getElementById('cta-img');
+const midImage = document.getElementById('middle-img');
+const navBar = document.querySelectorAll('a');
+const getStarted = document.querySelector('button');
+const mainText = document.querySelector('h1');
+const contentTitle = document.querySelector('.top-content h4');
+const paraContent = document.querySelector('.text-content p');
+
+
+const contactTitle = document.querySelector('.contact h4');
+const contactInfo = document.querySelectorAll('.contact p');
+
+
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
 ctaImage.setAttribute('src', siteContent['cta']['img-src']);
+
+midImage.setAttribute('src', siteContent['main-content']["middle-img-src"]);
+
+navBar[0].textContent = siteContent['nav']['nav-item-1'];
+navBar[1].textContent = siteContent['nav']['nav-item-2'];
+navBar[2].textContent = siteContent['nav']['nav-item-3'];
+navBar[3].textContent = siteContent['nav']['nav-item-4'];
+navBar[4].textContent = siteContent['nav']['nav-item-5'];
+navBar[5].textContent = siteContent['nav']['nav-item-6'];
+
+
+getStarted.textContent = "Get Started!";
+
+mainText.textContent = siteContent["cta"]["h1"];
+
+contentTitle.textContent = siteContent['main-content']['features-h4'];
+paraContent.textContent = siteContent['main-content']['features-content'];
+
+
+
+
+
+
+
+
+
+contactTitle.textContent = siteContent['contact']['contact-h4'];
+contactInfo[0].textContent = siteContent['contact']['address'];
+contactInfo[1].textContent = siteContent['contact']['phone'];
+contactInfo[2].textContent = siteContent['contact']['email'];
