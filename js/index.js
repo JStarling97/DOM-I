@@ -46,8 +46,9 @@ const midImage = document.getElementById('middle-img');
 const navBar = document.querySelectorAll('a');
 const getStarted = document.querySelector('button');
 const mainText = document.querySelector('h1');
-const contentTitle = document.querySelector('.top-content h4');
-const paraContent = document.querySelector('.text-content p');
+const contentTitle = document.querySelectorAll('.top-content h4');
+const paraContent = document.querySelectorAll('.text-content p');
+const bottomTitle = document.querySelectorAll('.bottom-content h4');
 const cwText = document.querySelector('footer p');
 
 const contactTitle = document.querySelector('.contact h4');
@@ -72,8 +73,19 @@ getStarted.textContent = "Get Started!";
 
 mainText.textContent = siteContent["cta"]["h1"];
 
-contentTitle.textContent = siteContent['main-content']['features-h4'];
-paraContent.textContent = siteContent['main-content']['features-content'];
+contentTitle[0].textContent = siteContent['main-content']['features-h4'];
+contentTitle[1].textContent = siteContent['main-content']['about-h4'];
+bottomTitle[0].textContent = siteContent['main-content']['services-h4'];
+bottomTitle[1].textContent = siteContent['main-content']['product-h4'];
+bottomTitle[2].textContent = siteContent['main-content']['vision-h4'];
+
+paraContent[0].textContent = siteContent['main-content']['features-content'];
+paraContent[1].textContent = siteContent['main-content']['about-content'];
+paraContent[2].textContent = siteContent['main-content']['services-content'];
+paraContent[3].textContent = siteContent['main-content']['product-content'];
+paraContent[4].textContent = siteContent['main-content']['vision-content'];
+
+
 
 
 
