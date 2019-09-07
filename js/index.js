@@ -48,7 +48,7 @@ const getStarted = document.querySelector('button');
 const mainText = document.querySelector('h1');
 const contentTitle = document.querySelector('.top-content h4');
 const paraContent = document.querySelector('.text-content p');
-
+const cwText = document.querySelector('footer p');
 
 const contactTitle = document.querySelector('.contact h4');
 const contactInfo = document.querySelectorAll('.contact p');
@@ -87,3 +87,6 @@ contactTitle.textContent = siteContent['contact']['contact-h4'];
 contactInfo[0].textContent = siteContent['contact']['address'];
 contactInfo[1].textContent = siteContent['contact']['phone'];
 contactInfo[2].textContent = siteContent['contact']['email'];
+
+
+cwText.textContent = siteContent['footer']['copyright'];
